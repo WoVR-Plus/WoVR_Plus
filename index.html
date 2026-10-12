@@ -175,13 +175,13 @@
       <h3>WoVR: The Shared WM-RL Framework</h3>
       <p>WoVR treats the world model as a generative simulator and controls hallucination at three complementary levels: simulator-level control, interaction-level reshaping, and policy-model alignment.</p>
       <figure class="paper-figure">
-        <a href="assets/figures/wovr-framework-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open WoVR: controllable simulator, reliable interaction, and policy-model alignment at full resolution"><img src="assets/figures/wovr-framework-latest.png" alt="WoVR: controllable simulator, reliable interaction, and policy-model alignment" width="1512" height="876" loading="lazy" decoding="async"></a>
+        <a href="assets/figures/wovr-framework-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open WoVR: controllable simulator, reliable interaction, and policy-model alignment at full resolution"><img src="assets/figures/wovr-framework-latest.png" alt="WoVR: controllable simulator, reliable interaction, and policy-model alignment" width="1512" height="1068" loading="lazy" decoding="async"></a>
       </figure>
 
       <h3>Extensions and Scope</h3>
       <p>WoVR+ preserves this reliability-oriented framework while redesigning its learned environment, exploration, and imagined interaction protocol for multi-view VLA policies and long-horizon, multi-stage manipulation.</p>
       <figure class="paper-figure extensions-overview-figure">
-        <a href="assets/figures/extensions-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open Vanilla WM-RL and WoVR+: VLA-aligned learned environment, coherent exploration, and stage-local optimization at full resolution"><img src="assets/figures/extensions-latest.png" alt="Vanilla WM-RL and WoVR+: VLA-aligned learned environment, coherent exploration, and stage-local optimization" width="1458" height="1554" loading="lazy" decoding="async"></a>
+        <a href="assets/figures/extensions-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open WoVR+ overview: VLA-aligned world model, temporally coherent exploration, and stage-local imagined optimization at full resolution"><img src="assets/figures/extensions-latest.png" alt="WoVR+ overview: VLA-aligned world model, temporally coherent exploration, and stage-local imagined optimization" width="3018" height="1602" loading="lazy" decoding="async"></a>
       </figure>
       <ul class="extension-list">
         <li><strong>Extended and redesigned.</strong> WoVR+ retains first-frame anchoring and extends it to an anchored sparse history. The single-view, delta-EEF formulation with vector action conditioning is replaced by a VLA-aligned multi-view interface with absolute joint-and-gripper commands, geometry-grounded action and camera conditioning, and command-based proprioceptive updates.</li>
@@ -195,7 +195,7 @@
       <article class="method-block" id="method-world-model" aria-labelledby="world-model-title">
         <h3 id="world-model-title">VLA-Aligned Multi-View World Model</h3>
       <figure class="paper-figure">
-        <a href="assets/figures/world-model-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open Geometry-grounded conditioning, latent-aligned control injection, proprioceptive updates, closed-loop context, and efficient generation at full resolution"><img src="assets/figures/world-model-latest.png" alt="Geometry-grounded conditioning, latent-aligned control injection, proprioceptive updates, closed-loop context, and efficient generation" width="1548" height="834" loading="lazy" decoding="async"></a>
+        <a href="assets/figures/world-model-latest.png" target="_blank" rel="noopener noreferrer" aria-label="Open Geometry-grounded conditioning, latent-aligned control injection, proprioceptive updates, closed-loop context, and efficient generation at full resolution"><img src="assets/figures/world-model-latest.png" alt="Geometry-grounded conditioning, latent-aligned control injection, proprioceptive updates, closed-loop context, and efficient generation" width="1512" height="840" loading="lazy" decoding="async"></a>
       </figure>
         <ul class="method-points">
           <li><strong>Geometry-grounded control.</strong> Absolute joint commands are projected into per-view action maps. Camera ray maps and view embeddings condition a parallel DiT control branch for synchronized head and wrist prediction.</li>
@@ -242,11 +242,11 @@
               <tr><th scope="row">Ctrl-World</th><td>5</td><td>0.318</td><td>73.22</td><td>229.83</td><td>0.812</td><td>16.39</td><td>0.350</td><td>117.45</td><td>305.39</td><td>0.863</td><td>22.38</td><td>4.16</td></tr>
               <tr><th scope="row">Ctrl-World</th><td>50</td><td>0.305</td><td>47.16</td><td>147.46</td><td>0.802</td><td>15.86</td><td>0.346</td><td>73.67</td><td>186.66</td><td>0.849</td><td>22.14</td><td>0.53</td></tr>
               <tr><th scope="row">EVAC</th><td>27</td><td>0.337</td><td>50.93</td><td>196.72</td><td>0.768</td><td>13.76</td><td>0.328</td><td>68.49</td><td>185.15</td><td>0.833</td><td>20.89</td><td>1.71</td></tr>
-              <tr><th scope="row">WoVR (single view)</th><td>5</td><td>0.182</td><td><span class="second-best">20.74</span></td><td>75.09</td><td>0.858</td><td>19.12</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>22.56</td></tr>
-              <tr><th scope="row">WoVR (three views)</th><td>5</td><td>0.231</td><td>27.01</td><td>109.33</td><td>0.825</td><td>16.96</td><td>0.269</td><td>47.55</td><td>124.41</td><td>0.825</td><td>23.16</td><td>14.01</td></tr>
+              <tr><th scope="row">WoVR (1 view)</th><td>5</td><td>0.182</td><td><span class="second-best">20.74</span></td><td>75.09</td><td>0.858</td><td>19.12</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>22.56</td></tr>
+              <tr><th scope="row">WoVR (3 views)</th><td>5</td><td>0.231</td><td>27.01</td><td>109.33</td><td>0.825</td><td>16.96</td><td>0.269</td><td>47.55</td><td>124.41</td><td>0.825</td><td>23.16</td><td>14.01</td></tr>
               <tr class="ours"><th scope="row">WoVR+</th><td>5</td><td><strong>0.148</strong></td><td>22.45</td><td>62.16</td><td><strong>0.883</strong></td><td><strong>22.28</strong></td><td><span class="second-best">0.204</span></td><td><span class="second-best">44.10</span></td><td><span class="second-best">81.33</span></td><td><strong>0.894</strong></td><td><strong>29.77</strong></td><td>9.41</td></tr>
               <tr class="ours"><th scope="row">WoVR+</th><td>50</td><td><span class="second-best">0.153</span></td><td><strong>19.92</strong></td><td><strong>49.61</strong></td><td><span class="second-best">0.877</span></td><td>21.86</td><td><strong>0.203</strong></td><td><strong>35.96</strong></td><td><strong>65.77</strong></td><td>0.888</td><td><span class="second-best">29.39</span></td><td>1.78</td></tr>
-              <tr class="ours"><th scope="row">WoVR+-DMD</th><td>1</td><td>0.163</td><td>23.59</td><td><span class="second-best">57.41</span></td><td><span class="second-best">0.877</span></td><td><span class="second-best">22.20</span></td><td>0.236</td><td>53.58</td><td>106.15</td><td><span class="second-best">0.889</span></td><td>28.79</td><td>15.03</td></tr>
+              <tr class="ours"><th scope="row">WoVR+ (DMD)</th><td>1</td><td>0.163</td><td>23.59</td><td><span class="second-best">57.41</span></td><td><span class="second-best">0.877</span></td><td><span class="second-best">22.20</span></td><td>0.236</td><td>53.58</td><td>106.15</td><td><span class="second-best">0.889</span></td><td>28.79</td><td>15.03</td></tr>
             </tbody>
           </table>
         </div>
@@ -428,9 +428,9 @@
     <hr>
     <section id="abstract" aria-labelledby="abstract-title">
       <h2 id="abstract-title">Abstract</h2>
-      <p>Action-conditioned world models can reduce costly real-robot interaction in reinforcement learning for Vision-Language-Action models (VLA-RL), but hallucinations can mislead policy optimization. Extending them to richer VLA interfaces and long-horizon tasks requires interface alignment, reliable exploration, and stage-wise learning.</p>
-      <p>We present WoVR+, extending WoVR’s hallucination-aware WM-RL framework to these settings by redesigning the learned environment and imagined interaction protocol: A VLA-interface-aligned world model provides multi-view prediction and proprioceptive updates while mitigating hallucinations. Chunk-wise noise preserves exploration for flow-based policies while limiting action jitter that degrades model predictions. For long-horizon tasks, stage-local imagined training combines stage-entry resets, stage-specific rewards, local horizons, and controllable sampling to shorten generated prefixes and balance training across stages.</p>
-      <p>WoVR+ improves success over SFT by 21.09% and 16.7% on RoboTwin and six real-robot tasks. Long-horizon phone-packaging success rises from 30% to 75%.</p>
+      <p>Action-conditioned world models can reduce costly real-robot interaction in reinforcement learning for Vision-Language-Action models (VLA-RL), but hallucinations can mislead policy optimization. Extending them to richer VLA interfaces and long-horizon tasks raises challenges in spatiotemporal and cross-modal consistency, exploration–reliability balance in RL, and compounding rollout errors.</p>
+      <p>We present WoVR+, extending WoVR’s hallucination-aware WM-RL framework by redesigning the learned environment and imagined interaction protocol: A VLA-interface-aligned world model provides multi-view prediction and proprioceptive updates while mitigating hallucinations. Chunk-wise noise preserves flow-based policy exploration while limiting prediction-degrading action jitter. For long-horizon tasks, stage-local imagined training combines stage-entry resets, stage-specific rewards, local horizons, and controllable sampling to shorten generated prefixes and balance training across stages.</p>
+      <p>WoVR+ improves success over SFT by 21.09% and 16.7% on RoboTwin and 6 real-robot tasks. Long-horizon phone-packaging success rises from 30% to 75%.</p>
     </section>
     <section id="wm-replay" aria-labelledby="wm-replay-title">
       <h2 id="wm-replay-title">GT vs. WoVR+ World Model: Same-Action Replay</h2>
