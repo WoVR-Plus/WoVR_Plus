@@ -202,5 +202,5 @@ section, .task-comparison, #recovery { scroll-margin-top: 84px; }
 
 /* Latest paper figures; preserve the RISE base stylesheet. */
 .extended-scope-figure { max-width: 1000px; margin: 24px auto; }
-.extensions-overview-figure { max-width: 800px; margin: 24px auto; }
+.extensions-overview-figure { max-width: none; margin: 24px auto; }
 .result-block h4 { color: var(--navy); font: 600 18px/1.4 Georgia, "Times New Roman", Times, serif; margin: 24px 0 12px; }
